@@ -437,12 +437,27 @@
   background-color: #;
   height: 500px;
 } */
+.field-name-active{
+  color: #ffffff;
+    font-size: 14px;
+    /* width: 83px; */
+    background: #36a2eb;
+    /* margin-left: 9px; */
+    text-align: center;
+    border-radius: 5px;
+}
 .dashBoardTab{
   padding: 5px;
   border: 1px solid black;
   margin: 25px;
   font-size: 14px;
   border-radius: 10px;
+}
+.field-data-active{
+  color: #36a2eb;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
 }
 .desc{
   font-size: 16px;
@@ -594,6 +609,26 @@ color: #ffffffb3
     padding: 10px 15px 6px 13px;
     width: 85%;
     text-align: left;
+}
+
+.card-container {
+  box-shadow: 0px 0px 8px 3px #2f72f74a;
+  margin-left: 2.3%;
+  margin-top: 22px;
+  background-color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+.row-margin{
+  margin: 0;
+  background: #ffffff;
+}
+.name-spacing{
+  text-align: center;
+  padding-bottom: 30px !important;
+  margin-top: 30px !important;
+  font-size: 18px;
 }
 #contact input[type="text"],
 #contact input[type="email"],

@@ -1,13 +1,18 @@
 import React from 'react';
 import './css/firstPage.css'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-
+import DashBoardChart from './dashBoardChart';
 export default class DashBoard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             tabIndex: 0,
             subTabIndex: 0,
+            dashBOardCArd:[
+                {
+                    active:'sending'
+                }
+            ]
         }
     }
     handleTabs = () => {
@@ -31,6 +36,7 @@ export default class DashBoard extends React.Component {
                             <Tab style={{ fontSize: '16px' }}>Step 2</Tab>
                             <Tab style={{ fontSize: '16px' }}>Step 3</Tab>
                             <Tab style={{ fontSize: '16px' }}>Step 4</Tab>
+                            <Tab style={{ fontSize: '16px' }}>Step 5</Tab>
                         </TabList>
                         <TabPanel >
                             <div className="LogInHead" style={{ height: '200px' }}>
@@ -441,6 +447,26 @@ export default class DashBoard extends React.Component {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </TabPanel>
+                        <TabPanel>
+                            <div className="row">
+                              
+                                <div className="col-md-3">
+                                    <DashBoardChart />
+                                </div>
+                                <div className="col-md-3">
+                                    <DashBoardChart />
+                                </div>
+                                <div className="col-md-3">
+                                    <DashBoardChart />
+                                </div>
+                                <div className="col-md-3">
+                                    <DashBoardChart />
+                                </div>
+                                {/* <div className="col-md-3">
+                                    <DashBoardChart />
+                                </div> */}
                             </div>
                         </TabPanel>
                     </Tabs>
