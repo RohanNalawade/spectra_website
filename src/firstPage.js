@@ -2,6 +2,7 @@ import React from 'react';
 import './css/firstPage.css'
 import Pic from './photos/assign.png'
 import Tata from './photos/tata.jpeg'
+import Video from './photos/video.mp4'
 import { Modal, ModalBody, Label } from 'reactstrap';
 import Configure from './configure';
 import DashBoard from './dashBoard'
@@ -9,7 +10,7 @@ export default class FirstPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            firstCard: false,
+            firstCard: true,
             secondCard: false,
             peopleCard: false,
             firstPeople: false,
@@ -79,29 +80,31 @@ export default class FirstPage extends React.Component {
                             {/* <div className="grad-bar"></div> */}
                             <nav className="navbar">
                                 {/* <img src="https://storage.googleapis.com/crmdevelopment/Organisation/ProfilePic/2020/07/31/starlly_logo.png" alt="Company Logo" /> */}
-                                <span className="comLogo">Starlly</span>
+                                <span ><a href="/" className="comLogo">Starlly</a></span>
                                 <div className="menu-toggle" id="mobile-menu">
                                     <span className="bar"></span>
                                     <span className="bar"></span>
                                     <span className="bar"></span>
                                 </div>
                                 <ul className="nav">
-                                    <li className="nav-item"><a href="#">How it works </a></li>
-                                    <li className="nav-item"><a href="#">Use Cases</a></li>
-                                    <li className="nav-item"><a href="#" onClick={this.configureNavHandle}>Configure Yourself</a></li>
-                                    <li className="nav-item"><a href="#">Pricing</a></li>
-                                    <li className="nav-item"><a href="#">Contact Us</a></li>
+                                    <li className="nav-item"><a href="#works">How it works </a></li>
+                                    <li className="nav-item"><a href="#UseCases">Use Cases</a></li>
+                                    <li className="nav-item"><a href="#Configure" onClick={this.configureNavHandle}>Configure Yourself</a></li>
+                                    <li className="nav-item"><a href="#Pricing">Pricing</a></li>
+                                    <li className="nav-item"><a href="#Contact">Contact Us</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <section className="features workBgcss">
+                <section id="works" className="features workBgcss">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="embed-responsive embed-responsive-21by9 videoCss">
-                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                                    <video autoplay loop="" controls width="640" height="480" className="videoTag">
+                                        <source type="video/mp4" src={Video} />
+                                    </video>
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -115,7 +118,7 @@ export default class FirstPage extends React.Component {
                         </div>
                     </div>
                 </section>
-                <section className="features serviceBgCss">
+                <section id="UseCases" className="features serviceBgCss">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6">
@@ -210,7 +213,7 @@ export default class FirstPage extends React.Component {
                         {/* </div> */}
                     </div>
                 </section>
-                <section className="features confBgCss">
+                <section id="Configure" className="features confBgCss">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6">
@@ -265,15 +268,14 @@ export default class FirstPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <section className="features dashBordcss">
+                <section id="Pricing" className="features dashBordcss">
                     <div className="container">
                         <div className="dashBordStyle">
                             <DashBoard />
-                            {/* <button style={{ margin: '10px', marginLeft: "90%", fontSize: '14px', padding: '5px' }} >submit</button> */}
                         </div>
                     </div>
                 </section>
-                <section className="features peopleBg">
+                <section id="Contact" className="features peopleBg">
                     <div className="container">
                         <div className="row">
                             <div >
@@ -294,7 +296,7 @@ to make Spectra provide better results.
                         <div className="row">
                             <div className="col-12">
                                 <ul className="people_list">
-                                    <li data-aos="fade-up" className={firstPeople === true ? "aos-animate open" : "aos-animate"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'firstPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'firstPeople')}>
+                                    <li data-aos="fade-up" className={firstPeople === true ? "aos-animate open padd" : "aos-animate padd"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'firstPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'firstPeople')}>
                                         <div className="people">
                                             <figure >
                                                 <img src={Tata} alt="people" />
@@ -311,7 +313,7 @@ to make Spectra provide better results.
                                             </div>
                                         </div>
                                     </li>
-                                    <li data-aos="fade-up" className={secondPeople === true ? "aos-animate open" : "aos-animate"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'secondPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'secondPeople')}>
+                                    <li data-aos="fade-up" className={secondPeople === true ? "aos-animate open padd" : "aos-animate padd"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'secondPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'secondPeople')}>
                                         <div className="people">
                                             <figure >
                                                 <img src={Tata} alt="people" />
@@ -328,7 +330,7 @@ to make Spectra provide better results.
                                             </div>
                                         </div>
                                     </li>
-                                    <li data-aos="fade-up" className={thirdPeople === true ? "aos-animate open" : "aos-animate"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'thirdPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'thirdPeople')}>
+                                    <li data-aos="fade-up" className={thirdPeople === true ? "aos-animate open padd" : "aos-animate padd"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'thirdPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'thirdPeople')}>
                                         <div className="people">
                                             <figure >
                                                 <img src={Tata} alt="people" />
@@ -345,7 +347,7 @@ to make Spectra provide better results.
                                             </div>
                                         </div>
                                     </li>
-                                    <li data-aos="fade-up" className={fourthPeople === true ? "aos-animate open" : "aos-animate"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'fourthPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'fourthPeople')}>
+                                    <li data-aos="fade-up" className={fourthPeople === true ? "aos-animate open padd" : "aos-animate padd"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'fourthPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'fourthPeople')}>
                                         <div className="people">
                                             <figure >
                                                 <img src={Tata} alt="people" />
@@ -362,7 +364,7 @@ to make Spectra provide better results.
                                             </div>
                                         </div>
                                     </li>
-                                    <li data-aos="fade-up" className={fivethPeople === true ? "aos-animate open" : "aos-animate"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'fivethPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'fivethPeople')}>
+                                    <li data-aos="fade-up" className={fivethPeople === true ? "aos-animate open padd" : "aos-animate padd"} data-aos-delay="300" onMouseOver={() => this.peopleCardFlex(true, 'fivethPeople')} onMouseLeave={() => this.peopleCardFlex(false, 'fivethPeople')}>
                                         <div className="people">
                                             <figure >
                                                 <img src={Tata} alt="people" />

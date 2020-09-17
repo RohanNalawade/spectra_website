@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Heebo','Lato', 'Arial', sans-serif;
+    font-family: 'Rubik', sans-serif;
   }
   
   /* HEADINGS */
@@ -30,9 +30,11 @@
   .page-wrapper {
     width: 100%;
     height: auto;
-    background-color: #1e223d;
+    background-color: #fdd749;
   }
-  
+  .page-wrapper:hover{
+    background-color: #fff;
+  }
   .nav-wrapper {
     width: 100%;
     position: -webkit-sticky; /* Safari */
@@ -59,7 +61,7 @@
     align-items: center;
     /* height: 50px; */
     overflow: hidden;
-    font-family: Heebo;
+    font-family: 'Rubik', sans-serif;
   }
   
   .navbar img {
@@ -78,7 +80,7 @@
   }
   
   .nav-item a {
-    color: #ffffff;
+    color: #1e223d;
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
@@ -217,14 +219,19 @@
   }
   
   .videoPar{
-    color: #1e223d;
+    color: #505050;
     margin-top: 20%;
-    font-size: 24px;
-    font-family: Heebo;
+    font-size: 28px;
+    line-height:48px;
+    font-family: 'Rubik', sans-serif;
     font-weight: 500;
   }
   .videoCss{
       height: 400px;
+  }
+  .videoTag{
+    background: #f0eef0;
+    border-radius: 20px;
   }
   .anim-trigger{
     list-style-type: none;
@@ -269,30 +276,41 @@
     transition: all 0.3s ease-out;
 }
 .configureCss{
-  font-size: 24px;
+  font-size: 30px;
   color: #1e223d;
   text-align: left;
-  font-family: Heebo;
+  line-height: 38px;
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  margin-top: 150px;
+  margin-top: 20px;
 }
 .confBgCss{
-  background-color: #f7fafc;
+  background-color: #a8daff;
+  padding: 150px 0;
+
 }
 .serviceBgCss{
-  background-color: #f7fafc;
+  background-color: #ffffff;
+  padding: 150px 0;
 }
 .workBgcss{
-  background-color: #f7fafc;
+  background-color: #FDD500;
+  padding: 150px 0;
+
 }
 .checkOutBut{
-  background-color: #f7fafc;
+  background-color: #a8daff;
+  
 }
 .dashBordcss{
-  background-color: #f7fafc;
+  background-color: #f3f3f5;
+  padding: 150px 0;
+
 }
 .peopleBg{
-  background-color: #f7fafc;
+  background-color: #ffffff;
+  padding: 150px 0;
+
 }
 .peopleCss{
   padding-left: 15px;
@@ -336,7 +354,6 @@
   margin: 0;
   max-width: 210px;
   flex-shrink: 0;
-  margin-left: 5px;
 }
 .people li {
   padding: 15px;
@@ -347,30 +364,34 @@
 .people img{
   border-radius: 5px;
     max-height: 100%;
-    width: 200px;
+    /* width: 200px; */
+}
+.padd{
+  padding: 10px;
 }
 .boxContaint{
   font-size: 14px;
-  color: #ffffff;
-  border: 1px solid;
+  color: #fff;
+  /* border: 1px solid; */
   margin: 10px;
   text-align: center;
-  width: 100px;
-  height: 100px;
+  background-color: #1e223d;
+  width: 150px;
+  /* height: 100px; */
   margin-left: auto;
   padding: 10px;
   margin-right: auto;
   border-radius: 0px 20px;
 }
 .companyDetails{
-  font-size: 20px;
+  font-size: 24px;
   color: #1e223d;
   font-weight: 500;
   line-height: 1.4;
   text-align: left;
 }
 .configBox{
-  background-color: #1e223d;
+  background-color: #e3e3e3;
   padding: 20px;
   border-radius: 15px;
 }
@@ -411,6 +432,7 @@
 }
 .peopleBox:hover{
   display: flex;
+  padding: 10px;
   opacity: 1;
   z-index: 1;
 }
@@ -492,11 +514,11 @@
 }
 .aboutHeading{
 font-size: 18px;
-color: #ffffffb3
+color: #ffffff
 }
 .aboutSubHeading{
   font-size: 16px;
-  color: #ffffffb3
+  color: #ffffffb8
 }
 
 .clickBut{
@@ -548,7 +570,7 @@ color: #ffffffb3
 .subTabone{
   font-size: 18px;
   color: #1e223d;
-  font-family: 'Heebo';
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
 .alertBoxCss{
@@ -565,7 +587,7 @@ color: #ffffffb3
   padding-top: 10px !important;
   padding-bottom: 9px !important;
   padding-left: 10px !important;
-  font-family: Heebo,Medium !important;
+  font-family: 'Rubik', sans-serif,Medium !important;
   font-size: 14px ;
 }
 .gatewayText{
@@ -573,7 +595,7 @@ color: #ffffffb3
   padding-top: 10px !important;
   padding-bottom: 9px !important;
   padding-left: 10px !important;
-  font-family: Heebo,Medium !important;
+  font-family: 'Rubik', sans-serif,Medium !important;
   font-size: 14px ;
 }
 .checkBoxCss{
@@ -587,7 +609,7 @@ color: #ffffffb3
 }
 .comLogo{
   color: #9253af;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
 }
 .textBorder{
