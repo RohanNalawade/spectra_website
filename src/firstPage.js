@@ -2,8 +2,8 @@ import React from 'react';
 import './css/firstPage.css'
 import Pic from './photos/assign.png'
 import Tata from './photos/tata.jpeg'
-import Video from './photos/video.mp4'
-import { Modal, ModalBody, Label } from 'reactstrap';
+import Video from './photos/videoF.mp4'
+import { Modal, ModalBody } from 'reactstrap';
 import Configure from './configure';
 import DashBoard from './dashBoard'
 export default class FirstPage extends React.Component {
