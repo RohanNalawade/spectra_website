@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from 'highcharts';
 import './css/firstPage.css'
@@ -17,7 +17,7 @@ class DashBoardChart extends React.Component {
     }
 
     componentDidMount() {
-        let options = { 
+        let options = {
             chart: {
                 renderTo: 'container',
                 type: 'pie',
@@ -102,43 +102,41 @@ class DashBoardChart extends React.Component {
                 showInLegend: false,
                 groupPadding: 0,
                 dataLabels: {
-                enabled: false
-            }
+                    enabled: false
+                }
             }]
-    }
+        }
 
         this.setState({
-        options: options
-    })
+            options: options
+        })
 
     }
 
-render() {
-    const { cardName, activeMessage, inactiveMessage, activeStatus, inactiveStatus } = this.props;
-
-    return (
-        <div className="card-container">
-            <div className="col-md-12">
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="mt-3 mb-2">
-                            <div className="field-name-active">Sending</div>
-                            <div className="field-data-active">65</div>
+    render() {
+        return (
+            <div className="card-container">
+                <div className="col-md-12">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="mt-3 mb-2">
+                                <div className="field-name-active">Sending</div>
+                                <div className="field-data-active">65</div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="mt-3 mb-2">
+                                <div className="field-name-active" style={{ background: '#ff9900' }}>Not Sending</div>
+                                <div className="field-data-active" style={{ color: '#ff9900' }}>65</div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <div className="mt-3 mb-2">
-                            <div className="field-name-active" style={{background:'#ff9900'}}>Not Sending</div>
-                            <div className="field-data-active" style={{color:'#ff9900'}}>65</div>
-                        </div>
-                    </div>
+                    <HighchartsReact containerProps={{ style: { width: '100px', height: '100px', marginLeft: 'auto', marginRight: 'auto', overFlow: 'visible !important' } }} highcharts={Highcharts} options={this.state.options} />
                 </div>
-                <HighchartsReact containerProps={{ style: { width: '100px', height: '100px', marginLeft: 'auto', marginRight: 'auto', overFlow: 'visible !important' } }} highcharts={Highcharts} options={this.state.options} />
+                <div className="name-spacing">{this.props.name}</div>
             </div>
-            <div className="name-spacing">Data Upload</div>
-        </div>
-    )
-}
+        )
+    }
 
 }
 export default DashBoardChart;
